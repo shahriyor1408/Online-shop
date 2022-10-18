@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "user-service", path = "/api/user")
 public interface UserClient {
+
     @GetMapping("check/{id}")
     boolean checkUserExists(@PathVariable long id);
 
